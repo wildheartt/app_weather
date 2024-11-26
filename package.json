@@ -14,7 +14,15 @@
   "license": "ISC",
   "description": "",
   "lint-staged": {
-    "src/**/*.js": "eslint"
+    "*.html": "prettier --write",
+    "*.css": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "devDependencies": {
     "@babel/cli": "^7.25.9",
